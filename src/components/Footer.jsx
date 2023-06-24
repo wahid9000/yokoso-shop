@@ -1,9 +1,10 @@
+"use client";
 
 import { FaPhoneAlt, FaMailchimp, FaAddressCard } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className="mt-24">
+        <div>
             <footer className="footer text-white p-10 bg-black opacity-85  h-full md:h-64 items-center">
                 <div>
                     

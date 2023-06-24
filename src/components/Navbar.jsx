@@ -3,12 +3,25 @@
 import Image from "next/image";
 import { afterLoginNavData, beforeLoginNavData } from "@/data/navData";
 import Link from "next/link";
+import useAuth from "@/hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
 
-    const user = null;
+    const { user, logout } = useAuth();
+    const { uid, displayName, photoURL } = user || {};
 
-    const navItemData = user ? afterLoginNavData : beforeLoginNavData;
+    const navItemData = uid ? afterLoginNavData : beforeLoginNavData;
+
+    const handleLogout = async () => {
+        await logout();
+        Swal.fire({
+            title: 'Logout Successful',
+            text: 'You have Logged Out successfully',
+            icon: 'Success',
+            confirmButtonText: 'Continue'
+        })
+    }
 
     return (
         <div className="navbar bg-black text-white fixed z-10">
@@ -61,12 +74,21 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <Image width={50} height={50} src="https://i.ibb.co/RjSZ112/3d-rendering-business-meeting-working-room-office-building.jpg" alt=""></Image>
-                    </div>
-                </label>
-                <Link href={''}><button className="btn btn-warning bg-[#D27D2D] ">Login</button></Link>
+                {
+                    uid &&
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <Image width={50} height={50} src={photoURL} alt=""></Image>
+                        </div>
+                    </label>
+                }
+                {
+                    uid ?
+                       <button onClick={handleLogout} className="btn btn-sm btn-warning text-white bg-[#D27D2D] ">Logout</button>
+                        :
+                        <Link href='/login'><button className="btn btn-sm btn-warning ml-2 text-white bg-[#D27D2D] ">Login</button></Link>
+
+                }
             </div>
         </div>
     );
