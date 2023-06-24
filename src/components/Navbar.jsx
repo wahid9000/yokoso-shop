@@ -11,7 +11,7 @@ const Navbar = () => {
     const navItemData = user ? afterLoginNavData : beforeLoginNavData;
 
     return (
-        <div className="navbar bg-[#5643a4] text-white">
+        <div className="navbar bg-black text-white fixed z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -66,7 +66,7 @@ const Navbar = () => {
                         <Image width={50} height={50} src="https://i.ibb.co/RjSZ112/3d-rendering-business-meeting-working-room-office-building.jpg" alt=""></Image>
                     </div>
                 </label>
-                <Link href={''}><button className="btn btn-primary ">Login</button></Link>
+                <Link href={''}><button className="btn btn-warning bg-[#D27D2D] ">Login</button></Link>
             </div>
         </div>
     );
