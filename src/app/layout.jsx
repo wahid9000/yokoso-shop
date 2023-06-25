@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={inter.className}>
+      <body className={"inter.className bg-black"}>
         <Providers>
           <div className='flex min-h-screen flex-col justify-between'>
             <div className='bg-black'>

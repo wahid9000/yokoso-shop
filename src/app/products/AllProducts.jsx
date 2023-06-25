@@ -1,18 +1,18 @@
-
 import getProducts from "@/utils/getProducts";
 import SingleProduct from "./SingleProduct";
 
 
-const Products = async() => {
-   const products = await getProducts();
+
+const AllProducts = async() => {
+   const allProducts = await getProducts();
     return (
         <div className="mt-12">
             <div className="text-white text-center mb-16 text-4xl font-semibold">
-                Featured Products
+                All Products
             </div>
             <div className=" grid grid-cols-3 gap-8">
                 {
-                    products.slice(0, 3).map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
+                    allProducts.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
                 }
             </div>
             
@@ -20,4 +20,4 @@ const Products = async() => {
     );
 };
 
-export default Products;
+export default AllProducts;
