@@ -11,11 +11,13 @@
   "dependencies": {
     "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "encoding": "^0.1.13",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "firebase": "^9.23.0",
     "framer-motion": "^10.12.17",
+    "jose": "^4.14.4",
     "mongodb": "^5.6.0",
     "next": "13.4.7",
     "postcss": "8.4.24",
@@ -25,6 +27,7 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.10.1",
     "react-loading-skeleton": "^3.3.1",
+    "server-only": "^0.0.1",
     "sweetalert2": "^11.7.12",
     "swiper": "^9.4.1",
     "tailwindcss": "3.3.2"

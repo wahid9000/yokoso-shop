@@ -5,7 +5,7 @@ import image from '@/assets/banner-image.png'
 import './Banner.css'
 const Banner = () => {
     return (
-        <div className="banner-bg h-[750px] text-white">
+        <div className="banner-bg h-[700px] text-white">
             <div className='md:flex justify-evenly items-center w-11/12 mx-auto pt-20 gap-20'>
                 <div>
                     <h2 className='text-7xl font-semibold text-center md:text-left'>Buy Your Desired Watch</h2>

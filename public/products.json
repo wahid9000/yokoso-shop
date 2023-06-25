@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Rolex Submariner",
+        "price": "$8,000",
+        "description": "The Rolex Submariner is a classic diver's watch known for its robustness, timeless design, and exceptional water resistance.",
+        "image": "https://i.ibb.co/F78Fd17/9071920-185.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Omega Speedmaster Professional",
+        "price": "$5,500",
+        "description": "The Omega Speedmaster Professional, also known as the 'Moonwatch,' was the first watch worn on the moon and is highly regarded for its precision and durability.",
+        "image": "https://i.ibb.co/XDG6mvg/9071923-186.jpg"
+      },
+      {
+        "id": 3,
+        "name": "TAG Heuer Carrera",
+        "price": "$4,200",
+        "description": "The TAG Heuer Carrera is a renowned chronograph watch famous for its sporty yet elegant design and association with motorsports.",
+        "image": "https://i.ibb.co/F78Fd17/9071920-185.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Patek Philippe Nautilus",
+        "price": "$30,000",
+        "description": "The Patek Philippe Nautilus is an iconic luxury watch with an instantly recognizable porthole-inspired design and exceptional craftsmanship.",
+        "image": "https://i.ibb.co/XDG6mvg/9071923-186.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Audemars Piguet Royal Oak",
+        "price": "$28,000",
+        "description": "The Audemars Piguet Royal Oak is a luxury sports watch known for its distinctive octagonal bezel, integrated bracelet, and high level of finishing.",
+        "image": "https://i.ibb.co/F78Fd17/9071920-185.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Cartier Santos",
+        "price": "$6,500",
+        "description": "The Cartier Santos is a classic timepiece characterized by its square case, exposed screws, and elegant aesthetic, representing a blend of style and functionality.",
+        "image": "https://i.ibb.co/XDG6mvg/9071923-186.jpg"
+      }
+]

@@ -5,22 +5,33 @@ import { afterLoginNavData, beforeLoginNavData } from "@/data/navData";
 import Link from "next/link";
 import useAuth from "@/hooks/useAuth";
 import Swal from "sweetalert2";
+import { usePathname, useRouter } from "next/navigation";
+
 
 const Navbar = () => {
 
     const { user, logout } = useAuth();
     const { uid, displayName, photoURL } = user || {};
+    const {replace} = useRouter();
+    const path = usePathname();
 
     const navItemData = uid ? afterLoginNavData : beforeLoginNavData;
 
     const handleLogout = async () => {
         await logout();
+        const res = await fetch("/api/auth/logout", {
+            method: "POST"
+        });
+        const data = await res.json();
         Swal.fire({
             title: 'Logout Successful',
             text: 'You have Logged Out successfully',
-            icon: 'Success',
+            icon: 'success',
             confirmButtonText: 'Continue'
         })
+        if(path.includes('/dashboard') || path.includes('/profile')) {
+            replace('/')
+        }
     }
 
     return (

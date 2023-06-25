@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers>
           <div className='flex min-h-screen flex-col justify-between'>
-            <div className='h-screen'>
+            <div className='bg-black'>
               <Navbar></Navbar>
               <main className='mt-5'>
                 {children}

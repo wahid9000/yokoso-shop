@@ -8,7 +8,7 @@ export const metadata = {
 
 const LoginPage = () => {
     return (
-        <div className='banner-bg h-screen'>
+        <div className='banner-bg h-[1000px]'>
             <LoginForm></LoginForm>
         </div>
     );
