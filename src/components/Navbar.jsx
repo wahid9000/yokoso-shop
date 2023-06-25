@@ -17,10 +17,6 @@ const Navbar = () => {
     const path = usePathname();
 
     const { cart } = useCart();
-    const total = useMemo(
-        () => cart.reduce((pre, cur) => cur.price * cur.quantity + pre, 0),
-        [cart]
-    );
 
 
     const navItemData = uid ? afterLoginNavData : beforeLoginNavData;
@@ -37,9 +33,7 @@ const Navbar = () => {
             icon: 'success',
             confirmButtonText: 'Continue'
         })
-        if (path.includes('/dashboard') || path.includes('/profile')) {
-            replace('/')
-        }
+       replace('/login')
     }
 
     return (

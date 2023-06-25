@@ -31,3 +31,5 @@ export const getProductsByIdsFromDb = async (ids = []) => {
   };
   return productsCollection.find(query).toArray();
 };
+
+

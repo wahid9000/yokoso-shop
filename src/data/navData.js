@@ -13,7 +13,7 @@ const navData = [
 export const afterLoginNavData = [
     ...navData,
     {
-        path: '/dashboard',
+        path: '/adminProducts',
         title: 'Dashboard'
     }
 ];

@@ -1,8 +1,9 @@
+import DashboardLayout from "./Dashboard";
 
 const Dashboard = () => {
     return (
         <div>
-            Dashboard
+            <DashboardLayout></DashboardLayout>
         </div>
     );
 };
