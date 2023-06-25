@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import image from '@/assets/banner-image.png'
 import './Banner.css'
+
 const Banner = () => {
     return (
         <div className="banner-bg h-[700px] text-white">
@@ -15,7 +16,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div>
-                    <Image src={image} width={950} height={950} alt='watch'></Image>
+                    <Image src={image} alt="" width={950} height={950} ></Image>
                 </div>
             </div>
 

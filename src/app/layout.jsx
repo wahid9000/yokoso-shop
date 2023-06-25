@@ -2,8 +2,9 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
-import Providers from '@/providers/Providers'
+
 import Toaster from '@/components/Toaster'
+import Providers from '@/providers/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,5 +31,5 @@ export default function RootLayout({ children }) {
 <Toaster></Toaster>
       </body>
     </html>
-  )
-}
+  );
+};

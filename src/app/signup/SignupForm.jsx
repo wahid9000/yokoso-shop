@@ -9,10 +9,17 @@ import { toast } from "react-hot-toast";
 import { FaGoogle } from "react-icons/fa";
 
 const SignupForm = () => {
-    const { register, handleSubmit, formState: { errors }, getValues, setValue } = useForm();
-    const { createUser, googleLogin, profileUpdate } = useAuth();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        getValues,
+        setValue,
+    } = useForm();
+
+    const { createUser, profileUpdate, googleLogin } = useAuth();
     const search = useSearchParams();
-    const from = search.get("redirectUrl") || '/';
+    const from = search.get("redirectUrl") || "/";
     const { replace } = useRouter();
 
     const uploadImage = async (event) => {
@@ -40,7 +47,6 @@ const SignupForm = () => {
         }
     };
 
-
     const onSubmit = async (data, event) => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
@@ -52,11 +58,11 @@ const SignupForm = () => {
                 photoURL: photo,
             });
             toast.dismiss(toastId);
-            toast.success("User signed up successfully");
-            replace(from)
+            toast.success("User signed in successfully");
+            replace(from);
         } catch (error) {
             toast.dismiss(toastId);
-            toast.error(error.message || "User not signed up");
+            toast.error(error.message || "User not signed in");
         }
     };
 
@@ -67,7 +73,7 @@ const SignupForm = () => {
             await createJWT({ email: user.email });
             toast.dismiss(toastId);
             toast.success("User signed in successfully");
-            replace(from)
+            replace(from);
         } catch (error) {
             toast.dismiss(toastId);
             toast.error(error.message || "User not signed in");
@@ -91,10 +97,9 @@ const SignupForm = () => {
                     </div>
                     {errors.email && <span className="text-red-600">Email field is required</span>}
 
-                    <div className='form-control relative'>
+                    <div className='form-control'>
                         <label className='font-bold text-white' htmlFor="password">Password:</label>
                         <input type="password" {...register("password", { required: true, minLength: 6, pattern: /^(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}$/ })} placeholder="Enter your Password*" className="mb-3 input input-bordered w-full max-w-md" required />
-
                     </div>
                     {errors.password?.type === 'required' && <span className="text-red-600">Password is required</span>}
                     {errors.password?.type === 'minLength' && <span className="text-red-600">Password must be atleast 6 characters or more</span>}

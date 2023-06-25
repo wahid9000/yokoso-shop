@@ -6,7 +6,7 @@ export  const middleware = async(request) => {
     const {pathname} = request.nextUrl;
 try{
     let cookie = request.cookies.get("jwt-token")?.value;
-    if(!cookie || cookie.startsWith("Bearer ")){
+    if(!cookie || cookie.startsWith("Bearer")){
         throw new Error("invalid Token");
     }
     const secret = new TextEncoder().encode(process.env.jwt_secret);

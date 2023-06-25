@@ -12,7 +12,7 @@ const Products = async() => {
             </div>
             <div className=" grid grid-cols-3 gap-8">
                 {
-                    products.map(product => <SingleProduct key={product.id} product={product}></SingleProduct>)
+                    products.map(product => <SingleProduct key={product._id} product={product}></SingleProduct>)
                 }
             </div>
             
