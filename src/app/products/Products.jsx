@@ -2,6 +2,7 @@
 import getProducts from "@/utils/getProducts";
 import SingleProduct from "./SingleProduct";
 
+
 const Products = async() => {
    const products = await getProducts();
     return (
